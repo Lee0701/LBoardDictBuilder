@@ -11,6 +11,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.openkoreantext:open-korean-text:2.1.0"
 }
 
 compileKotlin {

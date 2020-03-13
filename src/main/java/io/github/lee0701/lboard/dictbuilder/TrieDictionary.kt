@@ -6,6 +6,8 @@ import java.io.OutputStream
 class TrieDictionary {
 
     val root = Node()
+    var count: Int = 0
+        private set
 
     data class Node(
         val words: MutableList<Word> = mutableListOf(),
@@ -30,6 +32,7 @@ class TrieDictionary {
             p = n
         }
         p.addWord(Word(word, pos, frequency))
+        count += 1
     }
 
     fun search(word: String): List<Word> {
